@@ -18,6 +18,17 @@ public class Main {
         System.out.println("División: "+division);
 
         // Ejercicio 2
-        
+        System.out.println("Escribe otro valor: ");
+        int numero3 = teclado.nextInt();
+        System.out.println("Uno más");
+        int numero4 = teclado.nextInt();
+        if(numero3 > numero4){
+            System.out.println("El mayor es "+numero3);
+        }
+        else if(numero4>numero3){
+            System.out.println("El mayor es "+numero4);
+        }
+        else {
+            System.out.println("Son iguales");}
         }
     }
