@@ -1,3 +1,5 @@
+import com.sun.security.jgss.GSSUtil;
+
 import java.util.Scanner;
 
 public class Main {
@@ -68,8 +70,24 @@ public class Main {
                             break;
                     }
                     break;
+                case 4:
+                    System.out.println("Introduce una nota:");
+                    float nota = teclado.nextFloat();
+                    switch(nota){
+                        case nota < 5:
+                            System.out.println("Insuficiente");
+                        case nota <= 6:
+                            System.out.println("Suficiente");
+                        case nota <= 7:
+                            System.out.println("Bien");
+                        case nota <= 9:
+                            System.out.println("Notable");
+                        case nota < 10:
+                            System.out.println("Excelente");
+                        default:
+                            System.out.println("Matrícula de honor");
+                    }
             }
-
         }
     }
 }
