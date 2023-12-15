@@ -1,5 +1,3 @@
-import com.sun.security.jgss.GSSUtil;
-
 import java.util.Scanner;
 
 public class Main {
@@ -12,6 +10,8 @@ public class Main {
             System.out.println("1. Ejercicio 1");
             System.out.println("2. Ejercicio 2");
             System.out.println("3. Ejercicio 3");
+            System.out.println("4. Ejercicio 4");
+            System.out.println("5. Ejercicio 5");
             System.out.println("0. Salir");
             System.out.println("------------");
             System.out.println("Introduce una opción: ");
@@ -73,19 +73,28 @@ public class Main {
                 case 4:
                     System.out.println("Introduce una nota:");
                     float nota = teclado.nextFloat();
-                    switch(nota){
-                        case nota < 5:
-                            System.out.println("Insuficiente");
-                        case nota <= 6:
-                            System.out.println("Suficiente");
-                        case nota <= 7:
+                    if(nota < 5) {
+                        System.out.println("Insuficiente");
+                    }
+                    else if( nota <= 6){
+                        System.out.println("Suficiente");
+                    }
+                    else if(nota <= 7){
                             System.out.println("Bien");
-                        case nota <= 9:
+                    }
+                    else if(nota <= 9){
                             System.out.println("Notable");
-                        case nota < 10:
-                            System.out.println("Excelente");
-                        default:
+                    }
+                    else if(nota < 10) {
+                        System.out.println("Excelente");
+                    }
+                    else{
                             System.out.println("Matrícula de honor");
+                    }
+
+                case 5:
+                    for (int i=1; i<=20; i++){
+                        System.out.print(i);
                     }
             }
         }
