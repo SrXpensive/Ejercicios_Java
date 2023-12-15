@@ -12,6 +12,9 @@ public class Main {
             System.out.println("3. Ejercicio 3");
             System.out.println("4. Ejercicio 4");
             System.out.println("5. Ejercicio 5");
+            System.out.println("6. Ejercicio 6");
+            System.out.println("7. Ejercicio 7");
+            System.out.println("8. Ejercicio 8");
             System.out.println("0. Salir");
             System.out.println("------------");
             System.out.println("Introduce una opción: ");
@@ -33,6 +36,7 @@ public class Main {
                     System.out.println("División: " + division);
                     System.out.println("Potencia: " + potencia);
                     break;
+
                 case 2:
                     System.out.println("Escribe otro valor: ");
                     int numero3 = teclado.nextInt();
@@ -46,6 +50,7 @@ public class Main {
                         System.out.println("Son iguales");
                     }
                     break;
+
                 case 3:
                     System.out.println("Introduce el precio del producto:");
                     float precio = teclado.nextFloat();
@@ -70,6 +75,7 @@ public class Main {
                             break;
                     }
                     break;
+
                 case 4:
                     System.out.println("Introduce una nota:");
                     float nota = teclado.nextFloat();
@@ -91,11 +97,54 @@ public class Main {
                     else{
                             System.out.println("Matrícula de honor");
                     }
+                    break;
 
                 case 5:
                     for (int i=1; i<=20; i++){
-                        System.out.print(i);
+                        System.out.print(i+" ");
                     }
+                    System.out.println();
+                    break;
+
+                case 6:
+                    for (int i=1;i<=200;i++){
+                        if (i%2 == 0){
+                            System.out.print(i+" ");
+                        }
+                    }
+                    System.out.println();
+                    break;
+
+                case 7:
+                    for(int i =1;i<=200;i++){
+                        if(i%2 !=0){
+                            System.out.print(i+" ");
+                        }
+                    }
+                    System.out.println();
+                    break;
+
+                case 8:
+                    System.out.println("Introduce el número de términos que desees: ");
+                    int term = teclado.nextInt();
+                    int sumatorio = 0;
+                    int prod = 1;
+                    for (int i=1;i<=term;i++){
+                        System.out.print(i+" ");
+                        sumatorio += i;
+                        prod *= i;
+                    }
+                    System.out.println();
+                    System.out.println(sumatorio);
+                    System.out.println(prod);
+                    break;
+
+                case 0:
+                    break;
+
+                default:
+                    System.out.println("Opción incorrecta");
+                    break;
             }
         }
     }
