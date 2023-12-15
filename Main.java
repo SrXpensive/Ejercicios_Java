@@ -144,7 +144,6 @@ public class Main {
 
                 default:
                     System.out.println("Opción incorrecta");
-                    break;
             }
         }
     }
