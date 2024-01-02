@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +16,7 @@ public class Main {
             System.out.println("6. Ejercicio 6");
             System.out.println("7. Ejercicio 7");
             System.out.println("8. Ejercicio 8");
+            System.out.println("17. Ejercicio 17");
             System.out.println("0. Salir");
             System.out.println("------------");
             System.out.println("Introduce una opción: ");
@@ -137,6 +139,29 @@ public class Main {
                     System.out.println();
                     System.out.println(sumatorio);
                     System.out.println(prod);
+                    break;
+
+                case 17:
+                    System.out.println("Piensa un número entre 1 y 100, y dime si es mayor, menor o igual al que yo te propongo.");
+                    Random num = new Random();
+                    int max = 101;
+                    int min = 1;
+                    int valor = num.nextInt(max-min)+min;
+                    String comparacion;
+                    System.out.println("El número es mayor, igual o menor que 100?");
+                    comparacion = teclado.next();
+                    while (!comparacion.equals("igual")) {
+                        System.out.println("El número es mayor, igual o menor que " + valor + "?");
+                        comparacion = teclado.next();
+                        if (comparacion.equals("mayor")) {
+                            min = valor+1;
+                        } else if (comparacion.equals("menor")) {
+                            max = valor-1;
+                        }else {
+                            System.out.println("Tu número es "+valor);
+                        }
+                        valor = num.nextInt(max - min) + min;
+                    }
                     break;
 
                 case 0:
