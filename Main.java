@@ -17,6 +17,7 @@ public class Main {
             System.out.println("7. Ejercicio 7");
             System.out.println("8. Ejercicio 8");
             System.out.println("17. Ejercicio 17");
+            System.out.println("19. Ejercicio 19");
             System.out.println("0. Salir");
             System.out.println("------------");
             System.out.println("Introduce una opción: ");
@@ -163,7 +164,38 @@ public class Main {
                         valor = num.nextInt(max - min) + min;
                     }
                     break;
-
+                case 19:
+                    int operacion;
+                    int a;
+                    int b;
+                    double res = 0;
+                    System.out.println("Introduce el primer número:");
+                    a = teclado.nextInt();
+                    System.out.println("Introduce el segundo número:");
+                    b = teclado.nextInt();
+                    System.out.println("1. Sumar");
+                    System.out.println("2. Restar");
+                    System.out.println("3. Multiplicar");
+                    System.out.println("4. Dividir");
+                    System.out.println("0. Salir");
+                    System.out.println("Introduce la opcion deseada:");
+                    operacion = teclado.nextInt();
+                    switch(operacion){
+                        case 1:
+                            res= a+b;
+                            break;
+                        case 2:
+                            res = a-b;
+                            break;
+                        case 3:
+                            res = a*b;
+                            break;
+                        case 4:
+                            res = (double)a/b;
+                        case 0:
+                            break;
+                    }
+                    System.out.println("Resultado: "+res);
                 case 0:
                     break;
 
