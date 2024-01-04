@@ -18,6 +18,7 @@ public class Main {
             System.out.println("8. Ejercicio 8");
             System.out.println("17. Ejercicio 17");
             System.out.println("19. Ejercicio 19");
+            System.out.println("20. Ejercicio 20");
             System.out.println("0. Salir");
             System.out.println("------------");
             System.out.println("Introduce una opción: ");
@@ -196,6 +197,22 @@ public class Main {
                             break;
                     }
                     System.out.println("Resultado: "+res);
+                    break;
+                case 20:
+                    int numero;
+                    System.out.println("Introduce un número:");
+                    numero = teclado.nextInt();
+                    for (int i = 0; i < numero; i++){
+                        for(int espacios = numero-i; espacios > 0; espacios--){
+                            System.out.print(" ");
+                        }
+                        for (int asteriscos = 0; asteriscos <= i; asteriscos++){
+                            System.out.print("* ");
+                        }
+
+                        System.out.println();
+                    }
+                    break;
                 case 0:
                     break;
 
